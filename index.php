@@ -8,11 +8,6 @@ $router->addRoute('/', function() {
   Source::set("index");
 });
 
-// $router->addRoute('/test/<name>@<age>',function($name, $age){
-//   Source::set("file",['name' => $name, 'age' => $age]);
-// });
-
-// Route for the user_registration
 $router->addRoute('/users/register', function() {
   Source::set("register");
 }, 'POST');
