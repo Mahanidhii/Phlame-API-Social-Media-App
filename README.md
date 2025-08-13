@@ -50,3 +50,85 @@ This project is a Social Media Application built using **[Phlame API framework](
 Follow these instructions to set up and run the project on your local machine.
 
 ### 1. Backend Setup (Phlame API)
+### Prerequisites:
+- XAMPP (or any other local server stack with Apache, PHP and MySQL. This project works on XAMPP) installed.
+### Installation:
+1. **Clone the repository** into your XAMPP ```htdocs``` directory with.
+```git clone https://github.com/Mahanidhii/Phlame-API-Social-Media-App.git C:/xampp/htdocs/Phlame```
+2. **Start XAMPP :** Open the XAMPP Control Panel and start the Apache and MySQL services.
+3. **Create the Database :**
+   - Go to ```http://localhost/phpmyadmin``` in your browser.
+   - Create a new database named ```social_media```.
+   - Select the ```social_media``` database and go to the "SQL" tab.
+   - Execute the following SQL commands to create the necessary table.
+
+```sql
+   CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE posts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    content TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE likes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    post_id INT NOT NULL,
+    UNIQUE(user_id, post_id),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE
+); 
+```
+
+
+4. **Configure** ```.htaccess```: Ensure the .htaccess in the file in the project root (```/Phlame```) has the ```RewriteBase``` set correctly:
+```RewriteBase /Phlame/```
+The backend is now running and accessible at ```http://localhost/Phlame```
+
+### 2. Frontend Setup (Python CLI)
+**Prerequisites:**
+- Python 3
+**Installtion:**
+1. Navigate to the project directory in your terminal:
+```cd C:/xampp/htdocs/Phlame```
+2. Create a virtual environment (Recommended):
+
+```python
+For Windows:
+python -m venv venv
+venv\Scripts\activate 
+
+For Mac & Linux:
+python3 -m venv venv
+source venv/bin/activate
+```
+
+3. Install dependencies from the requirements.txt file:
+```python
+pip install -r requirements.txt
+```
+
+4. **Confirm API URL:** Open the app.py and ensure the API_URL variable is set correct for your environment
+```python
+API_URL="http://localhost/Phlame"
+```
+
+
+### How To Use
+1. Make sure your XAMPP services (Apache & MySQL) are running.
+2. Navigate to the project directory in your terminal and activate the virtual environment.
+3. Run the application with the following command:
+```python
+python app.py
+```
+
+4. The Application is running now with the backend local server ready to accept requests.
+5. Follow the menu shown to register new user, login, view posts, create posts and like them.
