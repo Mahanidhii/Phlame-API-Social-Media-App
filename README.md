@@ -47,7 +47,7 @@ This project is a Social Media Application built using **[Phlame API framework](
 
 
 ## Getting Started
-Follow these instructions to set up and run the project on your local machine.
+Follow these steps to set up and run the project on your local machine.
 
 ### 1. Backend Setup (Phlame API)
 ### Prerequisites:
