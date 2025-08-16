@@ -59,6 +59,7 @@ def login_user():
             print("\nError :  Failed to decode server response \n")
             return None
 
+
 # Function & API call for showing the feed
 def view_posts():
     print("\n ~ TODAY'S FEED ~ \n")
@@ -131,15 +132,6 @@ def like_post(post_id):
 
     except requests.exceptions.RequestException as e:
         print(f"\n Error : Could not like the post!!\n")
-
-
-
-
-
-
-
-
-
 
 
 
