@@ -8,6 +8,7 @@ $router->addRoute('/', function() {
   Source::set("index");
 });
 
+// route for new user registration
 $router->addRoute('/users/register', function() {
   Source::set("register");
 }, 'POST');
@@ -33,15 +34,7 @@ $router->addRoute('/posts/<id>/like', function($id){
 }, 'POST');
 
 
-
-
 $router->route();
-
-
-
-
-
-
 
 ?>
   
