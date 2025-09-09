@@ -133,27 +133,6 @@ python app.py
 4. The Application is running now with the backend local server ready to accept requests.
 5. Follow the menu shown to register new user, login, view posts, create posts and like them.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Future Additions : 
 1. Delete Posts
 2. Edit Posts
