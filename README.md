@@ -91,7 +91,7 @@ CREATE TABLE likes (
 
 4. **Configure** ```.htaccess```: Ensure the .htaccess in the file in the project root (```/Phlame```) has the ```RewriteBase``` set correctly:
 ```RewriteBase /Phlame/```
-The backend is now running and accessible at ```http://localhost/Phlame```
+The backend is now running and accessible at ```http://localhost/Phlame-API-Social-Media-App```
 
 ### 2. Frontend Setup (Python CLI)
 **Prerequisites:**
@@ -103,10 +103,12 @@ The backend is now running and accessible at ```http://localhost/Phlame```
 
 ```python
 For Windows:
+
 python -m venv venv
 venv\Scripts\activate 
 
 For Mac & Linux:
+
 python3 -m venv venv
 source venv/bin/activate
 ```

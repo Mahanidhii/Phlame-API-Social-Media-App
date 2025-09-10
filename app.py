@@ -1,10 +1,9 @@
 import requests
 import json
 
-API_URL="http://localhost/Phlame"
+API_URL = "http://localhost/Phlame-API-Social-Media-App"  # Base URL of the API
 session = requests.Session()
 
-# Function & API call for user registration
 def register_user():
     print("\n ~ Register as a New User ~ \n")
     username=input("Enter a USERNAME: ")
@@ -27,6 +26,8 @@ def register_user():
         print(response.json(),"\n")
     except requests.exceptions.RequestException as e:
         print(f"\n Error : Could not connect to the server : {e} \n")
+    except json.JSONDecodeError:
+        print("\n[Error] Failed to decode server response. The server may have crashed.")
 
 
 # Function & API call for user login

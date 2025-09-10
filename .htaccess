@@ -3,7 +3,7 @@
     RewriteEngine On
 
     # Set RewriteBase if your application is not in the root directory
-    RewriteBase /Phlame/
+    RewriteBase /Phlame-API-Social-Media-App/
 
     # Block direct access to the source directory
     RewriteRule ^source/ - [F]
