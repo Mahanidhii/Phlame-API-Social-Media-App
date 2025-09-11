@@ -74,7 +74,7 @@ def view_posts():
         if data.get('segments') and data['segments'].get('posts'):
             posts=data['segments']['posts']
             if not posts:
-                print("\n NO POSTS FOR NOW!\n ")
+                print("\n NO POSTS FOR NOW!\n \n Be the first one to post something!\n")
 
             for post in posts:
                 print("-" * 20)
@@ -143,10 +143,11 @@ def main():
         print("\n|~~~~ Phlame Social Media App ~~~~|\n")
 
         if logged_in_user:
-            print(f"Logged in as: {logged_in_user}")
+            print(f"\n Logged in as: {logged_in_user}\n")
         print("1. Register a new user")
         print("2. Login")
         print("3. View all posts")
+
         #Displays the (Login required) according to the state variable
         if logged_in_user:
             print("4. Make a post")
@@ -155,9 +156,7 @@ def main():
         print("5. Exit the app")
 
 
-
         choice=input("Enter your choice : ").strip()        
-
 
 
         if choice=='1':
