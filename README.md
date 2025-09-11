@@ -101,14 +101,14 @@ The backend is now running and accessible at ```http://localhost/Phlame-API-Soci
 ```cd C:/xampp/htdocs/Phlame```
 2. Create a virtual environment (Recommended):
 
-```python
 For Windows:
-
+```python
 python -m venv venv
 venv\Scripts\activate 
+```
 
 For Mac & Linux:
-
+```python
 python3 -m venv venv
 source venv/bin/activate
 ```
