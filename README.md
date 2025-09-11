@@ -98,7 +98,7 @@ The backend is now running and accessible at ```http://localhost/Phlame-API-Soci
 - Python 3
 **Installtion:**
 1. Navigate to the project directory in your terminal:
-```cd C:/xampp/htdocs/Phlame```
+```cd C:/xampp/htdocs/Phlame-API-Social-Media-App```
 2. Create a virtual environment (Recommended):
 
 For Windows:
